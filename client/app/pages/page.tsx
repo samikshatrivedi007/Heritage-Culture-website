@@ -1,0 +1,241 @@
+'use client';
+import React from 'react';
+import MapSection from '../components/MapSection';
+import SecondSection from "@/app/components/SecondSection";
+
+const HomePage: React.FC = () => {
+    return (
+        <>
+            {/* Hero Section */}
+            <div
+                className="relative h-screen bg-cover bg-center text-white font-sans"
+                style={{ backgroundImage: `url('/assets/HomepageImage.jpg')` }}
+            >
+                <div className="absolute inset-0 bg-black bg-opacity-50 px-10">
+                    {/* Navbar */}
+                    <header className="flex justify-between items-center pt-5">
+                        <div className="text-3xl font-bold">!INDIA</div>
+                        <nav>
+                            <ul className="flex space-x-8 font-semibold">
+                                <li><a href="#" className="hover:text-green-400">Home</a></li>
+                                <li><a href="#" className="hover:text-green-400">Heritage Sites</a></li>
+                                <li><a href="#" className="hover:text-green-400">Travel With Us</a></li>
+                                <li><a href="#" className="hover:text-green-400">Gallery</a></li>
+                                <li><a href="#" className="hover:text-green-400">Our Pride</a></li>
+                                <li><a href="#" className="hover:text-green-400">Blog</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+
+                    {/* Hero Content */}
+                    <main className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                            EXPLORE THE INDIAN CULTURE AND HERITAGE.
+                        </h1>
+                        <p className="max-w-xl mx-auto text-lg mb-8 leading-relaxed">
+                            India is a country dotted with stunning wildlife diversity, and rich traditions.
+                            While the Western coast greets you with mouth-watering delicacies, the East part invites you to experience its greenery.
+                        </p>
+                        <button className="bg-white text-green-700 hover:bg-green-600 hover:text-white transition px-6 py-3 rounded-md font-bold">
+                            Read More
+                        </button>
+                    </main>
+                </div>
+            </div>
+
+
+            {/* second Section */}
+            <SecondSection />
+
+            {/* Map Section */}
+            <MapSection />
+
+            {/* Gallery Section */}
+            <section id="cultureGallery" className="py-16 px-4 bg-orange-50 text-center">
+                <h2 className="text-3xl font-bold text-orange-700 mb-10">
+                    👆 Explore India's Rich Culture & Heritage!
+                </h2>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                    {[
+                        { src: "/images/food1.jpg", alt: "Traditional Thali" },
+                        { src: "/images/backwaters.jpg", alt: "Kerala Backwaters" },
+                        { src: "/images/spiti.jpg", alt: "Spiti Valley" },
+                        { src: "/images/hampi.jpg", alt: "Hampi Temples" },
+                        { src: "/images/bodhgaya.jpg", alt: "Bodh Gaya" },
+                        { src: "/images/kathak.jpg", alt: "Kathak Dance" },
+                        { src: "/images/golden-temple.jpg", alt: "Golden Temple" },
+                        { src: "/images/jaisalmer.jpg", alt: "Jaisalmer Fort" },
+                        { src: "/images/chola-temple.jpg", alt: "Chola Temples" },
+                        { src: "/images/sattriya.jpg", alt: "Sattriya Dance" },
+                        { src: "/images/manipur.jpg", alt: "Manipur Culture" },
+                        { src: "/images/udaipur.jpg", alt: "Udaipur Palace" },
+                        { src: "/images/sundarbans.jpg", alt: "Sundarbans" },
+                        { src: "/images/rath-yatra.jpg", alt: "Rath Yatra" },
+                        { src: "/images/diwali.jpg", alt: "Diwali Celebrations" },
+                    ].map(({ src, alt }, index) => (
+                        <a
+                            key={index}
+                            href="#"
+                            className="block rounded-lg overflow-hidden shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300"
+                        >
+                            <img
+                                src={src}
+                                alt={alt}
+                                className="w-full h-60 object-cover"
+                            />
+                        </a>
+                    ))}
+                </div>
+            </section>
+
+            {/* Great Indian Cities Section */}
+            <section id="indian-cities" className="bg-teal-50 py-16 px-4">
+                <h2 className="text-center text-3xl font-semibold text-gray-800 mb-10">
+                    The Great Indian Cities
+                </h2>
+                <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8">
+                    {[
+                        {
+                            name: "Delhi",
+                            tagline: "The Capital of India",
+                            image: "/images/delhi.jpg",
+                        },
+                        {
+                            name: "Mumbai",
+                            tagline: "The Financial Capital of India",
+                            image: "/images/mumbai.jpg",
+                        },
+                        {
+                            name: "Bangalore",
+                            tagline: "Silicon Valley of India",
+                            image: "/images/bangalore.jpg",
+                        },
+                    ].map((city, index) => (
+                        <div
+                            key={index}
+                            className="w-72 bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg"
+                        >
+                            <img
+                                src={city.image}
+                                alt={city.name}
+                                className="w-full h-48 object-cover"
+                            />
+                            <div className="p-4 text-left">
+                                <h3 className="text-xl font-bold">{city.name}</h3>
+                                <p className="text-gray-600 mt-1">{city.tagline}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+
+            {/* Blog Section */}
+            <section className="py-16 bg-gray-50">
+                <h2 className="text-4xl font-bold text-center mb-12">Blogs And Articles</h2>
+                <div className="flex flex-wrap justify-center gap-8">
+                    {[
+                        {
+                            id: 'food',
+                            title: 'Cultural India : Indian Food',
+                            source: 'CULTURALINDIA.NET',
+                            description:
+                                'The traditional food of India has been widely appreciated for its fabulous use of herbs and spices. Indian cuisine is known for its large assortment of dishes.',
+                            image: '/src/assets/food.jpg',
+                        },
+                        {
+                            id: 'diversity',
+                            title: 'The Unity of India in Diversity : Religions',
+                            source: "SOUMIK'S BLOG",
+                            description:
+                                'Diversity characterizes India. The diverse characters of India are strongly unified and perfectly assimilated to emerge as one single nation.',
+                            image: '/src/assets/unity.jpg',
+                        },
+                        {
+                            id: 'linguistic',
+                            title: 'A Look at India’s Amazing Linguistic Diversity',
+                            source: 'TRANSLATEMEDIA',
+                            description:
+                                'India is a big country and it packs in a truly amazing diversity of languages and dialects.',
+                            image: '/src/assets/language.jpg',
+                        },
+                        {
+                            id: 'festivals',
+                            title: 'The Spectrum of National festivals of India',
+                            source: 'TREEBO',
+                            description:
+                                'Such diverse cultures, culminating such varied festivals celebrated by different religious communities is what makes India truly unique.',
+                            image: '/src/assets/festival.jpg',
+                        },
+                    ].map((blog) => (
+                        <div
+                            key={blog.id}
+                            className="w-72 border rounded-xl shadow hover:scale-105 transition-transform bg-white cursor-pointer"
+                            onClick={() => (window.location.href = `/blog/${blog.id}`)}
+                        >
+                            <img
+                                src={blog.image}
+                                alt={blog.title}
+                                className="w-full h-48 object-cover rounded-t-xl"
+                            />
+                            <div className="p-4">
+                                <h4 className="text-sm text-gray-500 font-semibold mb-1">
+                                    {blog.source}
+                                </h4>
+                                <h3 className="text-lg font-bold text-blue-700 mb-2">
+                                    {blog.title}
+                                </h3>
+                                <p className="text-gray-700 text-sm">{blog.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+
+            {/* Footer Section */}
+            <section className="bg-white mt-10 px-6 py-10 border-t border-gray-200">
+                <div className="h-1 bg-gray-300 mb-10"></div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-700">
+                    <div>
+                        <h3 className="text-lg font-semibold text-green-600 mb-4">Travel with us</h3>
+                    </div>
+
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Dekho Apna Desh!</h3>
+                        <ul className="space-y-1">
+                            <li>Indian Culture</li>
+                            <li>Incredible!India</li>
+                            <li>Ministry of Culture</li>
+                            <li>Swachh Bharat</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Visit For More</h3>
+                        <ul className="space-y-1">
+                            <li>My Government</li>
+                            <li>Digital India</li>
+                            <li>Ministry of Tourism</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+                        <ul className="space-y-1">
+                            <li>Samiksha</li>
+                            <li>Ronak Gupta</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="mt-10 border-t-4 border-orange-500"></div>
+            </section>
+
+        </>
+    );
+};
+
+export default HomePage;
