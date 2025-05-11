@@ -1,7 +1,9 @@
 'use client';
 import React from 'react';
-import MapSection from '../components/MapSection';
-import SecondSection from "@/app/components/SecondSection";
+import MapSection from './components/MapSection';
+import SecondSection from "./components/SecondSection";
+import Image from 'next/image';
+
 
 const HomePage: React.FC = () => {
     return (
@@ -58,21 +60,21 @@ const HomePage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                     {[
-                        { src: "/images/food1.jpg", alt: "Traditional Thali" },
-                        { src: "/images/backwaters.jpg", alt: "Kerala Backwaters" },
-                        { src: "/images/spiti.jpg", alt: "Spiti Valley" },
-                        { src: "/images/hampi.jpg", alt: "Hampi Temples" },
-                        { src: "/images/bodhgaya.jpg", alt: "Bodh Gaya" },
-                        { src: "/images/kathak.jpg", alt: "Kathak Dance" },
-                        { src: "/images/golden-temple.jpg", alt: "Golden Temple" },
-                        { src: "/images/jaisalmer.jpg", alt: "Jaisalmer Fort" },
-                        { src: "/images/chola-temple.jpg", alt: "Chola Temples" },
-                        { src: "/images/sattriya.jpg", alt: "Sattriya Dance" },
-                        { src: "/images/manipur.jpg", alt: "Manipur Culture" },
-                        { src: "/images/udaipur.jpg", alt: "Udaipur Palace" },
-                        { src: "/images/sundarbans.jpg", alt: "Sundarbans" },
-                        { src: "/images/rath-yatra.jpg", alt: "Rath Yatra" },
-                        { src: "/images/diwali.jpg", alt: "Diwali Celebrations" },
+                        { src: "/assets/g1.jpg", alt: "Traditional Thali" },
+                        { src: "/assets/g2.jpg", alt: "Kerala Backwaters" },
+                        { src: "/assets/g3.jpg", alt: "Spiti Valley" },
+                        { src: "/assets/g4.jpg", alt: "Hampi Temples" },
+                        { src: "/assets/g5.jpg", alt: "Bodh Gaya" },
+                        { src: "/assets/g6.jpg", alt: "Kathak Dance" },
+                        { src: "/assets/g7.jpg", alt: "Golden Temple" },
+                        { src: "/assets/g8.jpg", alt: "Jaisalmer Fort" },
+                        { src: "/assets/g9.jpg", alt: "Chola Temples" },
+                        { src: "/assets/g10.jpg", alt: "Sattriya Dance" },
+                        { src: "/assets/g11.jpg", alt: "Manipur Culture" },
+                        { src: "/assets/g12.jpg", alt: "Udaipur Palace" },
+                        { src: "/assets/g13.jpeg", alt: "Sundarbans" },
+                        { src: "/assets/g14.jpeg", alt: "Rath Yatra" },
+                        { src: "/assets/g15.jpeg", alt: "Diwali Celebrations" },
                     ].map(({ src, alt }, index) => (
                         <a
                             key={index}
@@ -99,17 +101,17 @@ const HomePage: React.FC = () => {
                         {
                             name: "Delhi",
                             tagline: "The Capital of India",
-                            image: "/images/delhi.jpg",
+                            image: "/assets/delhi.jpg",
                         },
                         {
                             name: "Mumbai",
                             tagline: "The Financial Capital of India",
-                            image: "/images/mumbai.jpg",
+                            image: "/assets/mumbai.jpg",
                         },
                         {
                             name: "Bangalore",
                             tagline: "Silicon Valley of India",
-                            image: "/images/bangalore.jpg",
+                            image: "/assets/banglore.jpg",
                         },
                     ].map((city, index) => (
                         <div
@@ -142,7 +144,7 @@ const HomePage: React.FC = () => {
                             source: 'CULTURALINDIA.NET',
                             description:
                                 'The traditional food of India has been widely appreciated for its fabulous use of herbs and spices. Indian cuisine is known for its large assortment of dishes.',
-                            image: '/src/assets/food.jpg',
+                            image: '/assets/blog1.jpeg',
                         },
                         {
                             id: 'diversity',
@@ -150,7 +152,7 @@ const HomePage: React.FC = () => {
                             source: "SOUMIK'S BLOG",
                             description:
                                 'Diversity characterizes India. The diverse characters of India are strongly unified and perfectly assimilated to emerge as one single nation.',
-                            image: '/src/assets/unity.jpg',
+                            image: '/assets/blog2.jpeg',
                         },
                         {
                             id: 'linguistic',
@@ -158,7 +160,7 @@ const HomePage: React.FC = () => {
                             source: 'TRANSLATEMEDIA',
                             description:
                                 'India is a big country and it packs in a truly amazing diversity of languages and dialects.',
-                            image: '/src/assets/language.jpg',
+                            image: '/assets/blog3.jpeg',
                         },
                         {
                             id: 'festivals',
@@ -166,7 +168,7 @@ const HomePage: React.FC = () => {
                             source: 'TREEBO',
                             description:
                                 'Such diverse cultures, culminating such varied festivals celebrated by different religious communities is what makes India truly unique.',
-                            image: '/src/assets/festival.jpg',
+                            image: '/assets/blog4.jpg',
                         },
                     ].map((blog) => (
                         <div
