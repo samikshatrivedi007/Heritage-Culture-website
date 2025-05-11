@@ -2,13 +2,13 @@
 import React from 'react';
 
 const heritageSites = [
-    { name: 'Modhera Sun Temple', image: '/assets/modhera.jpg' },
-    { name: 'Adi Annamalai temple', image: '/assets/adi-annamalai.jpg' },
-    { name: 'Western Ghats', image: '/assets/western-ghats.jpg' },
-    { name: 'Red Fort', image: '/assets/red-fort.jpg' },
-    { name: 'Chhatrapati Shivaji Terminus', image: '/assets/shivaji-terminus.jpg' },
-    { name: 'Bandipur National Park', image: '/assets/bandipur.jpg' },
-    { name: 'Ganga Aarti', image: '/assets/ganga-aarti.jpg' },
+    { name: 'Modhera Sun Temple', image: '/assets/modhera.jpeg' },
+    { name: 'Adi Annamalai temple', image: '/assets/adi-annamalai.jpeg' },
+    { name: 'Western Ghats', image: '/assets/western-ghats.jpeg' },
+    { name: 'Red Fort', image: '/assets/red-fort.jepg' },
+    { name: 'Chhatrapati Shivaji Terminus', image: '/assets/shivaji-terminus.jpeg' },
+    { name: 'Bandipur National Park', image: '/assets/bandipur.jpeg' },
+    { name: 'Ganga Aarti', image: '/assets/ganga-aarti.jpeg' },
 ];
 
 const SecondSection: React.FC = () => {
