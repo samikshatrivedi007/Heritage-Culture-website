@@ -3,6 +3,7 @@ import React from 'react';
 import MapSection from './components/MapSection';
 import SecondSection from "./components/SecondSection";
 import Image from 'next/image';
+import Link from "next/link";
 
 
 const HomePage: React.FC = () => {
@@ -11,8 +12,10 @@ const HomePage: React.FC = () => {
             {/* Hero Section */}
             <div
                 className="relative h-screen bg-cover bg-center text-white font-sans"
-                style={{ backgroundImage: `url('/assets/HomepageImage.jpg')` }}
-            >
+                style={{ backgroundImage: `url('/client/me.png')` }}
+
+          >
+
                 <div className="absolute inset-0 bg-black bg-opacity-50 px-10">
                     {/* Navbar */}
                     <header className="flex justify-between items-center pt-5">
@@ -22,8 +25,12 @@ const HomePage: React.FC = () => {
                                 <li><a href="/" className="hover:text-green-400">Home</a></li>
                                 <li><a href="#" className="hover:text-green-400">Heritage Sites</a></li>
                                 <li><a href="#" className="hover:text-green-400">Travel With Us</a></li>
-                                <li><a href="#" className="hover:text-green-400">Gallery</a></li>
-                                <li><a href="shopPage" className="hover:text-green-400">Shop with us</a></li>
+                                <li><a href="galleryPage" className="hover:text-green-400">Gallery</a></li>
+                                <li><a href="shopPage" className="hover:text-green-400">Shop</a></li>
+
+
+
+
                                 <li><a href="#" className="hover:text-green-400">Blog</a></li>
                             </ul>
                         </nav>
@@ -44,7 +51,6 @@ const HomePage: React.FC = () => {
                     </main>
                 </div>
             </div>
-
 
             {/* second Section */}
             <SecondSection />
