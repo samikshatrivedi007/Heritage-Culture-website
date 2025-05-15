@@ -19,11 +19,11 @@ const HomePage: React.FC = () => {
                         <div className="text-3xl font-bold">!INDIA</div>
                         <nav>
                             <ul className="flex space-x-8 font-semibold">
-                                <li><a href="#" className="hover:text-green-400">Home</a></li>
+                                <li><a href="/" className="hover:text-green-400">Home</a></li>
                                 <li><a href="#" className="hover:text-green-400">Heritage Sites</a></li>
                                 <li><a href="#" className="hover:text-green-400">Travel With Us</a></li>
                                 <li><a href="#" className="hover:text-green-400">Gallery</a></li>
-                                <li><a href="#" className="hover:text-green-400">Our Pride</a></li>
+                                <li><a href="shopPage" className="hover:text-green-400">Shop with us</a></li>
                                 <li><a href="#" className="hover:text-green-400">Blog</a></li>
                             </ul>
                         </nav>
@@ -75,6 +75,7 @@ const HomePage: React.FC = () => {
                         { src: "/assets/g13.jpeg", alt: "Sundarbans" },
                         { src: "/assets/g14.jpeg", alt: "Rath Yatra" },
                         { src: "/assets/g15.jpeg", alt: "Diwali Celebrations" },
+                        { src: "/assets/g16.jpeg", alt: "lakshman jhula" },
                     ].map(({ src, alt }, index) => (
                         <a
                             key={index}
