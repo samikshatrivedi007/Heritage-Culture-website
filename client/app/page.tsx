@@ -12,26 +12,22 @@ const HomePage: React.FC = () => {
             {/* Hero Section */}
             <div
                 className="relative h-screen bg-cover bg-center text-white font-sans"
-                style={{ backgroundImage: `url('/client/me.png')` }}
+                style={{backgroundImage: `url('/client/me.png')`}}
 
-          >
+            >
 
-                <div className="absolute inset-0 bg-black bg-opacity-50 px-10">
+                <div className="absolute inset-0 bg-black bg-opacity-50 ">
                     {/* Navbar */}
-                    <header className="flex justify-between items-center pt-5">
-                        <div className="text-3xl font-bold">!INDIA</div>
+                    <header className=" fixed top-0 left-0 w-full z-50 flex justify-between items-center px-10 py-5 bg-white bg-opacity-70 backdrop-blur-md text-black">
+                        <div className="text-3xl font-bold text-orange-500">!INDIA</div>
                         <nav>
                             <ul className="flex space-x-8 font-semibold">
-                                <li><a href="/" className="hover:text-green-400">Home</a></li>
-                                <li><a href="#" className="hover:text-green-400">Heritage Sites</a></li>
-                                <li><a href="#" className="hover:text-green-400">Travel With Us</a></li>
-                                <li><a href="galleryPage" className="hover:text-green-400">Gallery</a></li>
-                                <li><a href="shopPage" className="hover:text-green-400">Shop</a></li>
-
-
-
-
-                                <li><a href="#" className="hover:text-green-400">Blog</a></li>
+                                <li><a href="/" className="text-green-600 font-medium hover:underline">Home</a></li>
+                                <li><a href="#" className="text-green-600 font-medium hover:underline">Heritage Sites</a></li>
+                                <li><a href="#" className="text-green-600 font-medium hover:underline">Travel With Us</a></li>
+                                <li><a href="galleryPage" className="text-green-600 font-medium hover:underline">Gallery</a></li>
+                                <li><a href="shopPage" className="text-green-600 font-medium hover:underline">Shop</a></li>
+                                <li><a href="blogPage" className="text-green-600 font-medium hover:underline">Blog</a></li>
                             </ul>
                         </nav>
                     </header>
@@ -43,20 +39,25 @@ const HomePage: React.FC = () => {
                         </h1>
                         <p className="max-w-xl mx-auto text-lg mb-8 leading-relaxed">
                             India is a country dotted with stunning wildlife diversity, and rich traditions.
-                            While the Western coast greets you with mouth-watering delicacies, the East part invites you to experience its greenery.
+                            While the Western coast greets you with mouth-watering delicacies, the East part invites you
+                            to experience its greenery.
                         </p>
-                        <button className="bg-white text-green-700 hover:bg-green-600 hover:text-white transition px-6 py-3 rounded-md font-bold">
+
+                        <Link href="#blog-section" scroll={true}>
+                        <button
+                            className="bg-white text-green-700 hover:bg-green-600 hover:text-white transition px-6 py-3 rounded-md font-bold">
                             Read More
                         </button>
+                        </Link>
                     </main>
                 </div>
             </div>
 
             {/* second Section */}
-            <SecondSection />
+            <SecondSection/>
 
             {/* Map Section */}
-            <MapSection />
+            <MapSection/>
 
             {/* Gallery Section */}
             <section id="cultureGallery" className="py-16 px-4 bg-orange-50 text-center">
@@ -66,23 +67,23 @@ const HomePage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                     {[
-                        { src: "/assets/g1.jpg", alt: "Traditional Thali" },
-                        { src: "/assets/g2.jpg", alt: "Kerala Backwaters" },
-                        { src: "/assets/g3.jpg", alt: "Spiti Valley" },
-                        { src: "/assets/g4.jpg", alt: "Hampi Temples" },
-                        { src: "/assets/g5.jpg", alt: "Bodh Gaya" },
-                        { src: "/assets/g6.jpg", alt: "Kathak Dance" },
-                        { src: "/assets/g7.jpg", alt: "Golden Temple" },
-                        { src: "/assets/g8.jpg", alt: "Jaisalmer Fort" },
-                        { src: "/assets/g9.jpg", alt: "Chola Temples" },
-                        { src: "/assets/g10.jpg", alt: "Sattriya Dance" },
-                        { src: "/assets/g11.jpg", alt: "Manipur Culture" },
-                        { src: "/assets/g12.jpg", alt: "Udaipur Palace" },
-                        { src: "/assets/g13.jpeg", alt: "Sundarbans" },
-                        { src: "/assets/g14.jpeg", alt: "Rath Yatra" },
-                        { src: "/assets/g15.jpeg", alt: "Diwali Celebrations" },
-                        { src: "/assets/g16.jpeg", alt: "lakshman jhula" },
-                    ].map(({ src, alt }, index) => (
+                        {src: "/assets/g1.jpg", alt: "Traditional Thali"},
+                        {src: "/assets/g2.jpg", alt: "Kerala Backwaters"},
+                        {src: "/assets/g3.jpg", alt: "Spiti Valley"},
+                        {src: "/assets/g4.jpg", alt: "Hampi Temples"},
+                        {src: "/assets/g5.jpg", alt: "Bodh Gaya"},
+                        {src: "/assets/g6.jpg", alt: "Kathak Dance"},
+                        {src: "/assets/g7.jpg", alt: "Golden Temple"},
+                        {src: "/assets/g8.jpg", alt: "Jaisalmer Fort"},
+                        {src: "/assets/g9.jpg", alt: "Chola Temples"},
+                        {src: "/assets/g10.jpg", alt: "Sattriya Dance"},
+                        {src: "/assets/g11.jpg", alt: "Manipur Culture"},
+                        {src: "/assets/g12.jpg", alt: "Udaipur Palace"},
+                        {src: "/assets/g13.jpeg", alt: "Sundarbans"},
+                        {src: "/assets/g14.jpeg", alt: "Rath Yatra"},
+                        {src: "/assets/g15.jpeg", alt: "Diwali Celebrations"},
+                        {src: "/assets/g16.jpeg", alt: "lakshman jhula"},
+                    ].map(({src, alt}, index) => (
                         <a
                             key={index}
                             href="#"
@@ -141,7 +142,8 @@ const HomePage: React.FC = () => {
 
 
             {/* Blog Section */}
-            <section className="py-16 bg-gray-50">
+            <section id="blog-section" className="py-16 bg-gray-50">
+
                 <h2 className="text-4xl font-bold text-center mb-12">Blogs And Articles</h2>
                 <div className="flex flex-wrap justify-center gap-8">
                     {[
@@ -234,8 +236,8 @@ const HomePage: React.FC = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                         <ul className="space-y-1">
-                            <li>Samiksha</li>
-                            <li>Ronak Gupta</li>
+                            <li>Samiksha Trivedi</li>
+
                         </ul>
                     </div>
                 </div>
