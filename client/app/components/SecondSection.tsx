@@ -14,18 +14,6 @@ const heritageSites = [
 const SecondSection: React.FC = () => {
     return (
         <div className="relative scroll-smooth font-sans">
-            {/* Navbar */}
-            <header className="flex justify-between items-center px-12 py-4 bg-white shadow-md sticky top-0 z-50">
-                <div className="text-3xl font-bold text-orange-500">!NDIA</div>
-                <nav className="space-x-8">
-                    <a href="#" className="text-green-600 font-medium hover:underline">Home</a>
-                    <a href="#" className="text-green-600 font-medium hover:underline">Heritage Sites</a>
-                    <a href="#" className="text-green-600 font-medium hover:underline">Travel With Us</a>
-                    <a href="#" className="text-green-600 font-medium hover:underline">Gallery</a>
-                    <a href="#" className="text-green-600 font-medium hover:underline">Our Pride</a>
-                    <a href="#" className="text-green-600 font-medium hover:underline">Blog</a>
-                </nav>
-            </header>
 
             {/* Hero Section */}
             <section className="text-center mt-12 px-4">
