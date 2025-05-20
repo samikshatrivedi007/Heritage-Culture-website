@@ -18,7 +18,7 @@ const MapSection: React.FC = () => {
             </div>
 
             <section
-                className="py-16 px-4 text-white text-center bg-black bg-[url('/background-image.jpg')] bg-cover bg-center"
+                className="py-16 px-4 text-black text-center bg-black bg-[url('/assets/map.jpg')] bg-cover bg-center"
                 id="mapSection"
             >
                 <h2 className="text-3xl font-bold mb-4">Locate top heritage sites in India!</h2>
