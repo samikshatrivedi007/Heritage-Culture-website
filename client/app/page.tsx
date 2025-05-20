@@ -206,7 +206,7 @@ const HomePage: React.FC = () => {
 
 
             {/* Footer Section */}
-            <section className="bg-white mt-10 px-6 py-10 border-t border-gray-200">
+            <section   id="footer-section"   className="bg-white mt-10 px-6 py-10 border-t border-gray-200">
                 <div className="h-1 bg-gray-300 mb-10"></div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-700">
@@ -236,7 +236,7 @@ const HomePage: React.FC = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                         <ul className="space-y-1">
-                            <li>Samiksha Trivedi</li>
+                            <li>Samiksha Trivedcd</li>
 
                         </ul>
                     </div>

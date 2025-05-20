@@ -29,8 +29,10 @@ const Navbar: React.FC = () => {
             </Link>
 
             <ul className="flex items-center gap-6 text-sm font-medium text-gray-700">
+                <li><Link href="/" className="hover:text-indigo-600">Home</Link> </li>
                 <li><Link href="/orders"  className="hover:text-indigo-600">Orders</Link></li>
                 <li><Link href="/account" className="hover:text-indigo-600">Account</Link></li>
+
 
                 {/* Cart with badge */}
                 <li className="relative">
