@@ -18,18 +18,18 @@ const MapSection: React.FC = () => {
             </div>
 
             <section
-                className="py-16 px-4 text-black text-center bg-black bg-[url('/assets/map.jpg')] bg-cover bg-center"
+                className="py-16 px-4 text-black text-center bg-black bg-blue-50 bg-cover bg-center"
                 id="mapSection"
             >
                 <h2 className="text-3xl font-bold mb-4">Locate top heritage sites in India!</h2>
                 <p className="text-lg max-w-2xl mx-auto mb-8">
-                    This map depicts the top ten historical sites in India in terms of their geographical location.
+                    This map depicts the historical sites in India in terms of their geographical location.
                     Click on any pointer to learn more about the place and to appreciate the diversity!
                 </p>
                 <div className="w-[90%] max-w-[900px] mx-auto rounded-lg overflow-hidden shadow-2xl transform transition-transform duration-300 hover:scale-[1.01]">
                     <iframe
                         title="Top Heritage Sites in India"
-                        src="https://www.google.com/maps/d/embed?mid=1QRYMlKkQjTQGOE-GIctY-YwPxx1cBOI&ehbc=2E312F"
+                        src="https://www.google.com/maps/d/u/0/embed?mid=1dGZZN07xGIF-Pj4WOAO60hvrpwAxF0A&ehbc=2E312F"
                         width="100%"
                         height="500"
                         allowFullScreen

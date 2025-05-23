@@ -14,8 +14,9 @@ type Product = {
 };
 
 const sampleProducts: Product[] = [
-    { id: '1', title: 'Handmade Pottery', description: 'Beautifully crafted clay pot from Rajasthan.', image: 'https://source.unsplash.com/400x300/?pottery,india', price: 799 },
-    { id: '2', title: 'Silk Saree',        description: 'Traditional silk saree from Banaras with fine zari work.',  image: 'https://source.unsplash.com/400x300/?saree,indian',  price: 2499 },
+    { id: '1', title: 'Handmade Pottery', description: 'Beautifully crafted clay pot from Rajasthan.', image: '/assets/shop1.jpg', price: 799 },
+    { id: '2', title: 'Silk Saree',        description: 'Traditional silk saree from Banaras with fine zari work.',  image: '/assets/shop2.jpeg',  price: 2499 },
+    { id: '3', title: 'Silk Saree',        description: 'Traditional silk saree from Banaras with fine zari work.',  image: '/assets/shop3.jpeg',  price: 2499 },
 ];
 
 /* ------------ Navbar ------------ */

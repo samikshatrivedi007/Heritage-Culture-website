@@ -11,8 +11,8 @@
     "mongoose": "^8.15.0"
   },
   "scripts": {
-    "dev": "nodemon --exec ts-node server.ts",
-    "start": "node server.ts",
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "start": "node src/server.ts",
     "build": "../node_modules/.bin/react-scripts build",
     "test": "../node_modules/.bin/react-scripts test",
     "eject": "../node_modules/.bin/react-scripts eject"

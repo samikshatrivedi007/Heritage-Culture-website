@@ -23,11 +23,14 @@ const HomePage: React.FC = () => {
                         <nav>
                             <ul className="flex space-x-8 font-semibold">
                                 <li><a href="/" className="text-green-600 font-medium hover:underline">Home</a></li>
-                                <li><a href="#" className="text-green-600 font-medium hover:underline">Heritage Sites</a></li>
-                                <li><a href="#" className="text-green-600 font-medium hover:underline">Travel With Us</a></li>
-                                <li><a href="galleryPage" className="text-green-600 font-medium hover:underline">Gallery</a></li>
+
+                                <li><a href="#" className="text-green-600 font-medium hover:underline">Travel With
+                                    Us</a></li>
+                                <li><a href="galleryPage"
+                                       className="text-green-600 font-medium hover:underline">Gallery</a></li>
                                 <li><a href="shopPage" className="text-green-600 font-medium hover:underline">Shop</a></li>
                                 <li><a href="blogPage" className="text-green-600 font-medium hover:underline">Blog</a></li>
+                                <li><a href="profilePage" className="text-green-600 font-medium hover:underline">profile</a></li>
                             </ul>
                         </nav>
                     </header>
@@ -110,32 +113,49 @@ const HomePage: React.FC = () => {
                             name: "Delhi",
                             tagline: "The Capital of India",
                             image: "/assets/delhi.jpg",
+                            paragraph:
+                                "Delhi, India's capital, is a massive metropolitan area rich in history and culture. From the bustling markets of Chandni Chowk to iconic landmarks like India Gate and the Red Fort, Delhi beautifully blends the ancient and the modern.",
                         },
                         {
                             name: "Mumbai",
                             tagline: "The Financial Capital of India",
                             image: "/assets/mumbai.jpg",
+                            paragraph:
+                                "Mumbai, the city that never sleeps, is known for its fast-paced life, Bollywood film industry, and the historic Gateway of India. It's a melting pot of cultures, food, fashion, and finance.",
                         },
                         {
                             name: "Bangalore",
                             tagline: "Silicon Valley of India",
                             image: "/assets/banglore.jpg",
+                            paragraph:
+                                "Bangalore is the tech capital of India, home to leading IT companies and startups. With its pleasant weather and green parks like Cubbon Park and Lalbagh, it offers a balance of work and leisure.",
                         },
                     ].map((city, index) => (
                         <div
                             key={index}
-                            className="w-72 bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg"
+                            className="relative group w-72 bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg"
                         >
+                            {/* City Image */}
                             <img
                                 src={city.image}
                                 alt={city.name}
                                 className="w-full h-48 object-cover"
                             />
+
+                            {/* Basic Info */}
                             <div className="p-4 text-left">
                                 <h3 className="text-xl font-bold">{city.name}</h3>
                                 <p className="text-gray-600 mt-1">{city.tagline}</p>
                             </div>
+
+
+                            {/* Hover Paragraph shown beside */}
+                            <div className="absolute top-0 left-[105%] w-64 bg-white border border-gray-300 shadow-lg p-3 text-sm text-gray-800 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 z-20">
+                                {city.paragraph}
+                            </div>
                         </div>
+
+
                     ))}
                 </div>
             </section>
@@ -217,29 +237,61 @@ const HomePage: React.FC = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Dekho Apna Desh!</h3>
                         <ul className="space-y-1">
-                            <li>Indian Culture</li>
-                            <li>Incredible!India</li>
-                            <li>Ministry of Culture</li>
-                            <li>Swachh Bharat</li>
+                            <li>
+                                <a href="https://www.indianculture.gov.in/" target="_blank" rel="noopener noreferrer"
+                                   className="hover:text-green-700 hover:underline">
+                                    Indian Culture
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.incredibleindia.org/" target="_blank" rel="noopener noreferrer"
+                                   className="hover:text-green-700 hover:underline">
+                                    Incredible!India
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.indiaculture.nic.in/" target="_blank" rel="noopener noreferrer"
+                                   className="hover:text-green-700 hover:underline">
+                                    Ministry of Culture
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://swachhbharat.mygov.in/" target="_blank" rel="noopener noreferrer"
+                                   className="hover:text-green-700 hover:underline">
+                                    Swachh Bharat
+                                </a>
+                                </li>
                         </ul>
                     </div>
 
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Visit For More</h3>
                         <ul className="space-y-1">
-                            <li>My Government</li>
-                            <li>Digital India</li>
-                            <li>Ministry of Tourism</li>
+                            <li>
+                                <a href="https://www.mygov.in/" target="_blank" rel="noopener noreferrer"
+                                   className="hover:text-green-700 hover:underline">
+                                    My Government
+                                </a>
+                            </li>
+
+                                <li>
+                                    <a href="https://www.digitalindia.gov.in/" target="_blank" rel="noopener noreferrer"
+                                       className="hover:text-green-700 hover:underline">
+                                        Digital India
+                                    </a>
+                                </li>
+
+
+                            <li>
+                                <a href="https://tourism.gov.in/" target="_blank" rel="noopener noreferrer"
+                                   className="hover:text-green-700 hover:underline">
+                                    Ministry of Tourism
+                                    </a>
+                            </li>
                         </ul>
                     </div>
 
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-                        <ul className="space-y-1">
-                            <li>Samiksha Trivedcd</li>
 
-                        </ul>
-                    </div>
                 </div>
 
                 <div className="mt-10 border-t-4 border-orange-500"></div>

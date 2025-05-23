@@ -23,7 +23,7 @@
     "outDir": "./dist"
   },
   "include": [
-    "server.ts",
+    "src/server.ts",
     "src/**/*"
   ]
 }

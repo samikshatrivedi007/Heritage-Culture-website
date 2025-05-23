@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import { connectToDatabase } from './libs/mongoose';
 import { User } from './models/user';
 import  ShoppingItem  from './models/shoppingItem';
-import Travel from './models/traveldestination';
+import Travel from './models/blog';
 
 
 async function seed() {

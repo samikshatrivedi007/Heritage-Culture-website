@@ -1,21 +1,18 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import express from "express";
 import mongoose from 'mongoose';
 
-
 import * as cors from 'cors';
 import * as bodyParser from 'body-parser';
-import * as dotenv from 'dotenv';
 
+import authRoutes from './routes/authRoutes';
+import shoppingRoutes from './routes/shoppingRoutes';
+import bookingRoutes from './routes/bookingRoutes';
+import { errorHandler } from './middleware/errorHandler';
+import blogRoutes from "./routes/blogRoutes";
 
-
-import authRoutes from './src/routes/authRoutes';
-import travelRoutes from './src/routes/travelRoutes';
-import shoppingRoutes from './src/routes/shoppingRoutes';
-import bookingRoutes from './src/routes/bookingRoutes';
-import { errorHandler } from './src/middleware/errorHandler';
-// import { connectToDatabase } from './src/libs/mongoose';  // If you want to use this, only use it here.
-
-dotenv.config();
 
 const app = express();
 
@@ -27,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/shop', shoppingRoutes);
-app.use('/api/travel', travelRoutes);
+app.use('/api/blog', blogRoutes);
 app.use('/api/bookings', bookingRoutes);
 
 // Root route
@@ -40,8 +37,8 @@ app.use(errorHandler);
 
 // Connect to MongoDB and start server
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/indian-culture';
-
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://samikshatrivedi007:Samiksha123@cluster0.mvzm1nn.mongodb.net/';
+console.log(MONGO_URI);
 mongoose.connect(MONGO_URI)
     .then(() => {
         console.log('✅ MongoDB connected');

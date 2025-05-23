@@ -5,6 +5,9 @@ const shoppingItemSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    id:{
+        type : String,
+    },
     description: String,
     price: {
         type: Number,
